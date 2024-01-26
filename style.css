@@ -1,0 +1,119 @@
+@import url("./reset.css");
+
+@font-face {
+  font-family: Figtree;
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+  font-weight: 600 800;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+
+  --color-primary: var(--yellow);
+  --color-neutral-light: var(--white);
+  --color-neutral-medium: var(--grey);
+  --color-neutral-dark: var(--black);
+
+  --color-text-neutral: var(--color-neutral-dark);
+  --color-text-neutral-medium: var(--color-neutral-medium);
+
+  --bg-neutral-light: var(--color-neutral-light);
+  --bg-primary: var(--color-primary);
+
+  --border-radius-lg: 16px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+
+  --font-weight-normal: 600;
+  --font-weight-bold: 800;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--color-text-neutral);
+  font-family: Figtree, sans-serif;
+  font-weight: var(--font-weight-normal);
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-weight-bold);
+}
+
+.tag {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-sm);
+  padding: 0.75em 1em;
+  font-weight: var(--font-weight-bold);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+  padding: 0 2rem;
+}
+
+.blog-preview-card {
+  width: clamp(10em, calc(100% - 2em), 24em);
+  padding: 1.5rem;
+
+  background-color: var(--bg-neutral-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-neutral-dark);
+  box-shadow: 10px 10px 0px -3px rgba(0, 0, 0, 1);
+}
+
+.blog-preview-card__image {
+  border-radius: var(--border-radius-md);
+}
+
+.blog-preview-card__tags {
+  display: flex;
+  gap: 1rem;
+}
+
+.blog-preview-card__title {
+  font-size: 1.5rem;
+}
+
+.blog-preview-card__title__link {
+  text-decoration: none;
+  color: var(--color-text-neutral);
+}
+
+.blog-preview-card__title__link:hover {
+  color: var(--color-primary);
+}
+
+.blog-preview-card__description {
+  font-size: 1.25rem;
+  color: var(--color-text-neutral-medium);
+}
+
+.blog-preview-card__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog-preview-card__author__image {
+  width: 48px;
+  height: 48px;
+}
+
+.blog-preview-card__author__name {
+  font-weight: var(--font-weight-bold);
+}
