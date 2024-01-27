@@ -47,7 +47,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
 h1,
